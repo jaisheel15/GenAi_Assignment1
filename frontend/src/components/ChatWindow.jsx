@@ -25,7 +25,7 @@ export default function ChatWindow({ persona, messages, setMessages, input, setI
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:3000/chat", {
+      const res = await axios.post("https://genai-assignment1.onrender.com/chat", {
         message: userMessage.text,
         persona,
         history: [...messages, userMessage],
